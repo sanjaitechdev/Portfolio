@@ -102,6 +102,6 @@ All rights reserved © 2026 Sanjai
 
 **Sanjai K**
 - Full Stack Developer | AI Developer
-- Email: sanjaibtechit.official@gmail.com
+- Email: [EMAIL_ADDRESS]
 - LinkedIn: [sanjaiit](https://www.linkedin.com/in/sanjaiit/)
 - GitHub: [sanjaitechdev](https://github.com/sanjaitechdev)
