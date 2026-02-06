@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         message: contactForm.elements['message'].value
                     };
 
-                    const response = await fetch('https://portfolio-5ire.onrender.com/send-enquiry', {
+                    const response = await fetch('http://localhost:5001/api/submit-enquiry', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
