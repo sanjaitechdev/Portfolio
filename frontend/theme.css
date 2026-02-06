@@ -1,0 +1,392 @@
+/* Light Theme Transition */
+[data-theme='light'] body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+[data-theme='light'] * {
+    transition: background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Light Theme - Clean Modern Profile Photo */
+[data-theme='light'] .hero-illustration::before {
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.15), transparent 70%);
+    filter: blur(25px);
+}
+
+[data-theme='light'] .hero-illustration::after {
+    border-color: rgba(15, 23, 42, 0.15);
+}
+
+[data-theme='light'] .hero-decoration-layer {
+    border: 1.5px solid rgba(15, 23, 42, 0.2);
+    background: rgba(15, 23, 42, 0.05);
+}
+
+[data-theme='light'] .hero-illustration:hover .hero-decoration-layer {
+    border-color: rgba(15, 23, 42, 0.4);
+}
+
+[data-theme='light'] .hero-illustration img {
+    border: 2px solid #0f172a;
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12),
+        0 0 0 8px rgba(15, 23, 42, 0.04);
+}
+
+[data-theme='light'] .hero-illustration img:hover {
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.18),
+        0 0 0 10px rgba(15, 23, 42, 0.1);
+}
+
+/* Light Theme - Glass Cards */
+[data-theme='light'] .glass-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid rgba(37, 99, 235, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='light'] .glass-card:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+[data-theme='light'] .glass-card p,
+[data-theme='light'] .about-card p {
+    color: #1e293b;
+}
+
+[data-theme='light'] h1,
+[data-theme='light'] h2,
+[data-theme='light'] h3,
+[data-theme='light'] h4,
+[data-theme='light'] h5,
+[data-theme='light'] h6 {
+    color: #0f172a !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: #0f172a !important;
+}
+
+[data-theme='light'] .section-header h2,
+[data-theme='light'] .hero-title,
+[data-theme='light'] .about-card h3,
+[data-theme='light'] .skill-card h3,
+[data-theme='light'] .project-content h3,
+[data-theme='light'] .timeline-content h3,
+[data-theme='light'] .cert-card h3,
+[data-theme='light'] .contact-card h3 {
+    color: #0f172a !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: #0f172a !important;
+}
+
+[data-theme='light'] .hero-tagline,
+[data-theme='light'] .project-tagline,
+[data-theme='light'] .project-content p {
+    color: #334155;
+}
+
+[data-theme='light'] .experience-points li,
+[data-theme='light'] .cert-card-points li {
+    color: #1e293b;
+}
+
+[data-theme='light'] .skill-tier p,
+[data-theme='light'] .skill-badges li {
+    color: #0f172a;
+}
+
+[data-theme='light'] .experience-location,
+[data-theme='light'] .experience-duration,
+[data-theme='light'] .cert-card-provider {
+    color: #475569;
+}
+
+[data-theme='light'] .project-tech {
+    color: #1d4ed8;
+    font-weight: 600;
+}
+
+[data-theme='light'] .about-card-note {
+    color: #1d4ed8;
+}
+
+[data-theme='light'] .contact-details-list li {
+    color: #1e293b;
+}
+
+[data-theme='light'] .contact-details-list li strong {
+    color: #1d4ed8;
+    font-weight: 700;
+}
+
+[data-theme='light'] .contact-note {
+    color: #475569;
+}
+
+[data-theme='light'] .form-field label {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+[data-theme='light'] .hero-intro {
+    color: #475569;
+}
+
+[data-theme='light'] .hero-subtitle {
+    color: #1d4ed8;
+    font-weight: 700;
+}
+
+[data-theme='light'] .hero-title {
+    text-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+}
+
+[data-theme='light'] .skill-tier-label {
+    color: #1d4ed8;
+    font-weight: 700;
+}
+
+[data-theme='light'] .nav-link {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+[data-theme='light'] .site-footer {
+    color: #475569;
+}
+
+[data-theme='light'] .site-footer p {
+    color: #64748b;
+}
+
+[data-theme='light'] .nav-toggle-line {
+    background-color: #0f172a;
+}
+
+/* Light Theme - Buttons */
+[data-theme='light'] .btn-primary {
+    background: linear-gradient(120deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    box-shadow: 0 4px 16px rgba(37, 99, 235, 0.25);
+}
+
+[data-theme='light'] .btn-primary:hover {
+    box-shadow: 0 6px 24px rgba(37, 99, 235, 0.35);
+    transform: translateY(-2px);
+}
+
+[data-theme='light'] .btn-secondary {
+    background: #ffffff;
+    border: 2px solid rgba(37, 99, 235, 0.3);
+    color: #1d4ed8;
+    font-weight: 600;
+}
+
+[data-theme='light'] .btn-secondary:hover {
+    background: rgba(37, 99, 235, 0.05);
+    border-color: rgba(37, 99, 235, 0.5);
+    transform: translateY(-2px);
+}
+
+[data-theme='light'] .btn-download {
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    border: 2px solid rgba(37, 99, 235, 0.25);
+    color: #1d4ed8;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='light'] .btn-download:hover {
+    background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+    border-color: rgba(37, 99, 235, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Light Theme - Navbar */
+[data-theme='light'] .site-header::before {
+    background: linear-gradient(90deg, rgba(37, 99, 235, 0), rgba(37, 99, 235, 0.15), rgba(37, 99, 235, 0));
+}
+
+[data-theme='light'] .site-header::after {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.95));
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme='light'] .brand {
+    background: #ffffff;
+    border: 2px solid rgba(37, 99, 235, 0.2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='light'] .brand:hover {
+    border-color: rgba(37, 99, 235, 0.35);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='light'] .brand::before {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(30, 64, 175, 0.12));
+}
+
+[data-theme='light'] .brand span {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: #0f172a !important;
+    color: #0f172a !important;
+}
+
+/* Light Theme - Skill Cards */
+[data-theme='light'] .skill-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .skill-card-header {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(59, 130, 246, 0.08));
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.05);
+}
+
+[data-theme='light'] .skill-card:hover .skill-card-header {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(59, 130, 246, 0.12));
+    border-color: rgba(37, 99, 235, 0.3);
+}
+
+[data-theme='light'] .skill-tier {
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    border: 1px solid rgba(37, 99, 235, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme='light'] .skill-tier:hover {
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    border-color: rgba(37, 99, 235, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .skill-tier-label {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(59, 130, 246, 0.12));
+    border: 1px solid rgba(37, 99, 235, 0.25);
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.1);
+}
+
+[data-theme='light'] .skill-badges li {
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme='light'] .skill-badges li:hover {
+    background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+    border-color: rgba(37, 99, 235, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+}
+
+/* Light Theme - Project Cards */
+[data-theme='light'] .project-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='light'] .project-card::before,
+[data-theme='light'] .project-card::after {
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.05), transparent 60%);
+}
+
+/* Light Theme - Experience Cards */
+[data-theme='light'] .experience-card {
+    background: linear-gradient(120deg, #2563eb, #1d4ed8) top / 100% 3px no-repeat,
+        linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .experience-timeline::before {
+    background: linear-gradient(180deg, rgba(37, 99, 235, 0.2), rgba(30, 64, 175, 0.1));
+}
+
+/* Light Theme - Certification Cards */
+[data-theme='light'] .cert-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='light'] .cert-card-link {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(59, 130, 246, 0.12));
+    border: 1px solid rgba(37, 99, 235, 0.3);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+}
+
+[data-theme='light'] .cert-card-link:hover {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.25), rgba(59, 130, 246, 0.2));
+    border-color: rgba(37, 99, 235, 0.45);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* Light Theme - Contact Cards */
+[data-theme='light'] .contact-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='light'] .form-field input,
+[data-theme='light'] .form-field textarea {
+    background: linear-gradient(145deg, rgba(248, 250, 252, 0.98), rgba(255, 255, 255, 0.95));
+    border-color: rgba(37, 99, 235, 0.25);
+    color: #0f172a;
+    font-weight: 500;
+}
+
+[data-theme='light'] .form-field input::placeholder,
+[data-theme='light'] .form-field textarea::placeholder {
+    color: #94a3b8;
+    font-weight: 400;
+}
+
+[data-theme='light'] .form-field input:focus,
+[data-theme='light'] .form-field textarea:focus {
+    border-color: rgba(37, 99, 235, 0.4);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Light Theme - About Cards */
+[data-theme='light'] .about-card-icon {
+    background: radial-gradient(circle at 30% 30%, rgba(37, 99, 235, 0.15), transparent 70%),
+        rgba(37, 99, 235, 0.08);
+    box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.15);
+}
+
+[data-theme='light'] .about-card-note--highlight {
+    background: rgba(37, 99, 235, 0.05);
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+[data-theme='light'] .about-card-note--highlight .note-label {
+    background: rgba(37, 99, 235, 0.12);
+    border-color: rgba(37, 99, 235, 0.25);
+}
+
+/* Light Theme - Footer */
+[data-theme='light'] .footer-social-link {
+    background: rgba(37, 99, 235, 0.08);
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+[data-theme='light'] .footer-social-link:hover {
+    background: rgba(37, 99, 235, 0.15);
+    border-color: rgba(37, 99, 235, 0.35);
+}

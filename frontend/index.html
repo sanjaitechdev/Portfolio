@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sanjaichan is a full stack developer building modern, scalable applications with cutting-edge technologies.">
+    <meta name="keywords" content="Sanjaichan, Full Stack Developer, Portfolio, Web Developer, JavaScript, Node.js">
+    <meta name="author" content="Sanjaichan">
+    <title>Sanjai | Software Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <header class="site-header" id="top">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#hero" class="brand" aria-label="Go to landing section"><span>Sanjai.webdev</span></a>
+            <button class="theme-switcher" id="theme-switcher" aria-label="Switch between dark and light theme"
+                aria-live="polite">
+                <svg class="sun" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-content" data-animate="fade-up">
+                <p class="hero-intro">Hi, I'm</p>
+                <h1 class="hero-title">Sanjai</h1>
+                <h2 class="hero-subtitle">Full Stack Developer | AI Developer</h2>
+                <p class="hero-tagline">Building full stack and AI-powered web solutions that deliver measurable impact.
+                    I build scalable, user-friendly web applications using Java, Spring Boot, React JS, and MySQL,
+                    integrating Generative AI to create smart, real-world solutions.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">Explore My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Let's Collaborate</a>
+                    <a href="assets/Sanjai-K-Resume.pdf" class="btn btn-download" download
+                        aria-label="Download Sanjai's resume">Download Resume</a>
+                </div>
+            </div>
+            <div class="hero-visual" data-animate="fade-left" aria-hidden="true">
+                <div class="hero-illustration">
+                    <div class="hero-decoration-layer"></div>
+                    <img src="assets/portfolio.jpg" alt="Sanjai" width="400" height="400">
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="section-header" data-animate="fade-up">
+                <h2>About</h2>
+            </div>
+            <div class="about-grid">
+                <article class="glass-card about-card" data-animate="fade-up">
+                    <span class="about-card-icon" aria-hidden="true">👨‍💻</span>
+                    <h3>Who I Am</h3>
+                    <p>I am Sanjai K, a passionate Java Full Stack Developer with a strong interest in Generative AI. I
+                        focus on building clean, scalable, and user-friendly web applications using Java, Spring Boot,
+                        React JS, and MySQL.</p>
+                    <p class="about-card-note">I believe good software is not just about functionality, but also about
+                        user experience and real-world impact.</p>
+                </article>
+                <article class="glass-card about-card" data-animate="fade-up" data-animate-delay="120">
+                    <span class="about-card-icon" aria-hidden="true">🧭</span>
+                    <h3>My Coding Journey</h3>
+                    <p>My coding journey started with curiosity about how websites and applications work behind the
+                        scenes. I began with basic programming and frontend development, then gradually moved into full
+                        stack development, learning how frontend, backend, and databases work together.</p>
+                    <p class="about-card-note">Hands-on projects, version control with Git, and problem-solving practice
+                        helped me build a strong foundation and explore Generative AI and Prompt Engineering for
+                        intelligent features.</p>
+                </article>
+                <article class="glass-card about-card" data-animate="fade-up" data-animate-delay="240">
+                    <span class="about-card-icon" aria-hidden="true">🚀</span>
+                    <h3>What Drives Me</h3>
+                    <p>I am driven by continuous learning, problem-solving, and innovation. I enjoy turning ideas into
+                        functional applications and improving them step by step. I like working in teams, taking on
+                        challenges, and writing better code every day.</p>
+                    <p class="about-card-note about-card-note--highlight">
+                        <span class="note-label" aria-hidden="true">Goal</span>
+                        <span>Become a Full Stack + AI Developer delivering impactful, real-world solutions.</span>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="skills section" id="skills">
+            <div class="section-header" data-animate="fade-up">
+                <h2>Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <article class="skill-card skill-card--stack" data-animate="fade-up">
+                    <div class="skill-card-header">
+                        <h3>Programming</h3>
+                        <span aria-hidden="true" class="skill-card-icon">🧠</span>
+                    </div>
+                    <div class="skill-tier">
+                        <span class="skill-tier-label">Advanced</span>
+                        <p>HTML | CSS | JavaScript | Java | MySQL | APIs | React </p>
+                    </div>
+                    <div class="skill-tier">
+                        <span class="skill-tier-label">Intermediate</span>
+                        <p>C | Python | MongoDB | PostgreSQL
+                        </p>
+                    </div>
+                    <div class="skill-tier">
+                        <span class="skill-tier-label">Familiar</span>
+                        <p>Spring Boot | Node.js | C++</p>
+                    </div>
+                </article>
+                <article class="skill-card skill-card--tools" data-animate="fade-up" data-animate-delay="140">
+                    <div class="skill-card-header">
+                        <h3>Tools &amp; Technologies</h3>
+                        <span aria-hidden="true" class="skill-card-icon">🧰</span>
+                    </div>
+                    <ul class="skill-badges">
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>VS Code</li>
+                        <li>Eclipse IDE</li>
+                        <li>APIs</li>
+                        <li>GitHub Copilot</li>
+                        <li>Claude AI</li>
+                        <li>
+                            Cursor AI</li>
+                    </ul>
+                </article>
+                <article class="skill-card skill-card--ai" data-animate="fade-up" data-animate-delay="280">
+                    <div class="skill-card-header">
+                        <h3>AI &amp; Innovation</h3>
+                        <span aria-hidden="true" class="skill-card-icon">🚀</span>
+                    </div>
+                    <ul class="skill-badges skill-badges--wrap">
+                        <li>Generative AI Integrations</li>
+                        <li>Prompt Engineering</li>
+                        <li>AI-driven UX Concepts</li>
+                        <li>Automation Workflows</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="experience section" id="experience">
+            <div class="section-header" data-animate="fade-up">
+                <h2>Experience</h2>
+            </div>
+            <div class="experience-timeline">
+                <article class="experience-card" data-animate="fade-up">
+                    <div class="experience-header">
+                        <h3>Freelance Web Developer</h3>
+                        <p class="experience-location">Remote | Self-Employed</p>
+                        <p class="experience-duration">Jan 2025 – Present</p>
+                    </div>
+                    <ul class="experience-points">
+                        <li>Designed and developed responsive, user-friendly websites using HTML, CSS, JavaScript, and
+                            React.</li>
+                        <li>Worked closely with clients to understand requirements and deliver custom web solutions.
+                        </li>
+                        <li>Improved website performance, UI consistency, and cross-device compatibility.</li>
+                        <li>Managed projects independently, ensuring on-time delivery and quality standards.</li>
+                    </ul>
+                </article>
+                <article class="experience-card" data-animate="fade-up" data-animate-delay="140">
+                    <div class="experience-header">
+                        <h3>Web Developer Intern</h3>
+                        <p class="experience-location">CODEALPHA | Chennai, Tamil Nadu</p>
+                        <p class="experience-duration">Nov 2025 – Dec 2025</p>
+                    </div>
+                    <ul class="experience-points">
+                        <li>Built responsive UI components using HTML, CSS, JavaScript, and React to improve user
+                            experience.</li>
+                        <li>Collaborated with backend teams to integrate APIs and optimize application performance.</li>
+                        <li>Enhanced page load speed and usability through efficient code structuring and UI
+                            improvements.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="projects section" id="projects">
+            <div class="section-header" data-animate="fade-up">
+                <h2>Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card" data-animate="fade-up">
+                    <div class="project-image">
+                        <img src="assets/images/coreguide.png" alt="Movie recommendation interface preview"
+                            loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Movie Recommendation System</h3>
+                        <p class="project-tagline">Personalized movie discovery that adapts to viewing patterns and
+                            evolving tastes.</p>
+                        <p class="project-tech">Tech Stack: HTML • CSS • JavaScript • MySQL</p>
+                        <div class="project-actions">
+                            <a href="#" class="btn btn-tertiary"
+                                aria-label="Open the Movie Recommendation System live link">Live Link</a>
+                            <a href="#" class="btn btn-outline"
+                                aria-label="View the Movie Recommendation System on GitHub">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card" data-animate="fade-up" data-animate-delay="100">
+                    <div class="project-image">
+                        <img src="assets/images/coreguide.png" alt="Course recommendation dashboard preview"
+                            loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Course Recommendation System</h3>
+                        <p class="project-tagline">Guiding learners toward the most relevant courses based on their
+                            interests and academic profile.</p>
+                        <p class="project-tech">Tech Stack: HTML • CSS • JavaScript • MySQL</p>
+                        <div class="project-actions">
+                            <a href="#" class="btn btn-tertiary"
+                                aria-label="Open the Course Recommendation System live link">Live Link</a>
+                            <a href="#" class="btn btn-outline"
+                                aria-label="View the Course Recommendation System on GitHub">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card" data-animate="fade-up" data-animate-delay="200">
+                    <div class="project-image">
+                        <img src="assets/images/coreguide.png" alt="Travel planner interface preview" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>Travel Companion App</h3>
+                        <p class="project-tagline">An itinerary-first travel planner that consolidates destinations,
+                            budgets, and live travel insights.</p>
+                        <p class="project-tech">Tech Stack: HTML • CSS • JavaScript • REST APIs</p>
+                        <div class="project-actions">
+                            <a href="#" class="btn btn-tertiary"
+                                aria-label="Open the Travel Companion App live link">Live Link</a>
+                            <a href="#" class="btn btn-outline"
+                                aria-label="View the Travel Companion App on GitHub">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card" data-animate="fade-up" data-animate-delay="300">
+                    <div class="project-image">
+                        <img src="assets/images/coreguide.png" alt="E-commerce platform preview" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p class="project-tagline">A full-featured online shopping platform with secure payments,
+                            product management, and user authentication.</p>
+                        <p class="project-tech">Tech Stack: React • Node.js • Express • MongoDB</p>
+                        <div class="project-actions">
+                            <a href="#" class="btn btn-tertiary"
+                                aria-label="Open the E-Commerce Platform live link">Live Link</a>
+                            <a href="#" class="btn btn-outline"
+                                aria-label="View the E-Commerce Platform on GitHub">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="certifications section" id="certifications">
+            <div class="section-header" data-animate="fade-up">
+                <h2>Certifications</h2>
+            </div>
+            <div class="certifications-grid">
+                <article class="cert-card cert-card--large" data-animate="fade-up">
+                    <div class="cert-card-header">
+                        <div>
+                            <h3>IBM Full Stack Software Developer Professional Certificate</h3>
+                            <p class="cert-card-provider">IBM</p>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1T2HTU9C_20mphRr3vOFj-GL5BS9xhJz1/view?usp=drive_link"
+                            class="cert-card-link" target="_blank" rel="noopener"
+                            aria-label="Verify IBM Full Stack Software Developer Professional Certificate">
+                            <span class="cert-card-link-icon" aria-hidden="true">🔗</span>
+                            <span>View Certificate</span>
+                        </a>
+                    </div>
+                    <ul class="cert-card-points">
+                        <li>Developed and deployed real-world full-stack applications, including REST APIs and
+                            CRUD-based projects.</li>
+                        <li>Followed industry best practices with Git, Docker, and cloud-based development workflows.
+                        </li>
+                    </ul>
+                </article>
+                <article class="cert-card" data-animate="fade-up" data-animate-delay="100">
+                    <div class="cert-card-header">
+                        <div>
+                            <h3>Programming in Java</h3>
+                            <p class="cert-card-provider">NPTEL</p>
+                        </div>
+                        <a href="https://drive.google.com/file/d/11u-FQ9AgsfdMxkUDLDPh-Kj0ALydrcRY/view?usp=drive_link"
+                            class="cert-card-link" target="_blank" rel="noopener"
+                            aria-label="Verify Programming in Java certificate">
+                            <span class="cert-card-link-icon" aria-hidden="true">🔗</span>
+                            <span>View Certificate</span>
+                        </a>
+                    </div>
+                    <ul class="cert-card-points">
+                        <li>Strong understanding of Core Java, Object-Oriented Programming, and Java fundamentals.</li>
+                        <li>Applied Java concepts through practical exercises and real-world problem statements.</li>
+                    </ul>
+                </article>
+                <article class="cert-card" data-animate="fade-up" data-animate-delay="200">
+                    <div class="cert-card-header">
+                        <div>
+                            <h3>GenAI Professional</h3>
+                            <p class="cert-card-provider">Oracle</p>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1RtNNl4BZZYnnBIgCxN52yCS54-I1scml/view?usp=drive_link"
+                            class="cert-card-link" target="_blank" rel="noopener"
+                            aria-label="Verify GenAI Professional certificate">
+                            <span class="cert-card-link-icon" aria-hidden="true">🔗</span>
+                            <span>View Certificate</span>
+                        </a>
+                    </div>
+                    <ul class="cert-card-points">
+                        <li>Learned key concepts of Generative AI and enterprise-level AI application patterns.</li>
+                        <li>Explored how AI capabilities integrate with modern software systems and workflows.</li>
+                    </ul>
+                </article>
+                <article class="cert-card" data-animate="fade-up" data-animate-delay="300">
+                    <div class="cert-card-header">
+                        <div>
+                            <h3>Google AI Essentials</h3>
+                            <p class="cert-card-provider">Google</p>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1rI9xCvekFlAhljcVommrkisTl3BbThJ4/view?usp=sharing"
+                            class="cert-card-link" target="_blank" rel="noopener"
+                            aria-label="Verify Google AI Essentials certificate">
+                            <span class="cert-card-link-icon" aria-hidden="true">🔗</span>
+                            <span>View Certificate</span>
+                        </a>
+                    </div>
+                    <ul class="cert-card-points">
+                        <li>Learned to effectively use AI for productivity, content creation, problem-solving, and
+                            decision-making, with hands-on exposure to real-life AI use cases.</li>
+                    </ul>
+                </article>
+                <article class="cert-card" data-animate="fade-up" data-animate-delay="400">
+                    <div class="cert-card-header">
+                        <div>
+                            <h3>Google Prompting Essentials</h3>
+                            <p class="cert-card-provider">Google</p>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1rcsYo1uMYb8Uik5qqvwuBAe7Z2oLEKnW/view?usp=drive_link"
+                            class="cert-card-link" target="_blank" rel="noopener"
+                            aria-label="Verify Google Prompting Essentials certificate">
+                            <span class="cert-card-link-icon" aria-hidden="true">🔗</span>
+                            <span>View Certificate</span>
+                        </a>
+                    </div>
+                    <ul class="cert-card-points">
+                        <li>Gained practical skills in prompt engineering techniques such as role prompting, iterative
+                            prompting, and task-specific prompts to improve AI responses for development, learning, and
+                            productivity workflows.</li>
+                    </ul>
+                </article>
+                <article class="cert-card" data-animate="fade-up" data-animate-delay="500">
+                    <div class="cert-card-header">
+                        <div>
+                            <h3>Prompt Engineering</h3>
+                            <p class="cert-card-provider">Naan Mudhalvan</p>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1V_onmtBM2KhmVdvmJ0JG6vwazAglliHh/view?usp=drive_link"
+                            class="cert-card-link" target="_blank" rel="noopener"
+                            aria-label="Verify Prompt Engineering certificate">
+                            <span class="cert-card-link-icon" aria-hidden="true">🔗</span>
+                            <span>View Certificate</span>
+                        </a>
+                    </div>
+                    <ul class="cert-card-points">
+                        <li>Gained hands-on experience crafting and optimizing prompts for AI language models.</li>
+                        <li>Applied prompt engineering techniques to improve AI output quality and relevance.</li>
+                    </ul>
+                </article>
+                <article class="cert-card" data-animate="fade-up" data-animate-delay="600">
+                    <div class="cert-card-header">
+                        <div>
+                            <h3>Frontend Developer</h3>
+                            <p class="cert-card-provider">Infosys Springboard</p>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1KBxjJbiSj3V5m8g4heQdGZS3rb46LDNN/view?usp=drive_link"
+                            class="cert-card-link" target="_blank" rel="noopener"
+                            aria-label="Verify Frontend Developer certificate">
+                            <span class="cert-card-link-icon" aria-hidden="true">🔗</span>
+                            <span>View Certificate</span>
+                        </a>
+                    </div>
+                    <ul class="cert-card-points">
+                        <li>Built responsive, accessible web interfaces with HTML, CSS, and JavaScript.</li>
+                        <li>Followed industry best practices for frontend engineering and UI design systems.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="section-header" data-animate="fade-up">
+                <h2>Contact</h2>
+            </div>
+            <div class="contact-card-stack">
+                <article class="contact-card contact-card--details" data-animate="fade-left">
+                    <h3 style="text-align: center;">Get in Touch</h3>
+                    <ul class="contact-details-list">
+                        <li><strong>Name:</strong> Sanjai Programmer</li>
+                        <li><strong>Role:</strong> Full Stack Developer</li>
+                        <li><strong>Phone:</strong> <a href="tel:+919363595834"
+                                style="color: inherit; text-decoration: none;">+91-9363595834</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:sanjaibtechit.official@gmail.com"
+                                style="color: inherit; text-decoration: none;">sanjaibtechit.official@gmail.com</a></li>
+                        <li><strong>Location:</strong> India</li>
+                    </ul>
+                    <p class="contact-note">Available for projects, internships, and collaborations.</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/sanjaiit/" target="_blank" rel="noopener"
+                            aria-label="LinkedIn profile" class="footer-social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/sanjaitechdev" target="_blank" rel="noopener"
+                            aria-label="GitHub profile" class="footer-social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="https://leetcode.com/sanjai-programmer/" target="_blank" rel="noopener"
+                            aria-label="LeetCode profile" class="footer-social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 5.844a1.374 1.374 0 0 0-.438.961v10.39a1.374 1.374 0 0 0 .438.961l5.405 5.405a1.374 1.374 0 0 0 .961.438h7.034a1.374 1.374 0 0 0 1.374-1.374V1.374A1.374 1.374 0 0 0 20.517 0h-7.034ZM15.482 18.125h-2.94v-4.99l-2.039-2.039v7.029h-2.94V5.875h2.94v4.99l2.039 2.039V5.875h2.94v12.25Z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/sanjaichan" target="_blank" rel="noopener"
+                            aria-label="Instagram profile" class="footer-social-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                <article class="contact-card contact-card--form" data-animate="fade-right">
+                    <h3 style="text-align: center;">For Project Inquiries</h3>
+                    <form class="contact-form contact-form--grid" novalidate>
+                        <div class="form-field form-field--split">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required
+                                aria-required="true" aria-invalid="false">
+                            <span class="field-error" aria-live="polite"></span>
+                        </div>
+                        <div class="form-field form-field--split">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your email" required
+                                aria-required="true" aria-invalid="false">
+                            <span class="field-error" aria-live="polite"></span>
+                        </div>
+                        <div class="form-field form-field--full">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell me about your project"
+                                required aria-required="true" aria-invalid="false"></textarea>
+                            <span class="field-error" aria-live="polite"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary contact-submit">Submit Request</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year"></span> Sanjai. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js?v=1.1" defer></script>
+</body>
+
+</html>
