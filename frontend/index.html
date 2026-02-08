@@ -38,6 +38,16 @@
                     <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                 </svg>
             </button>
+            <button class="share-btn-nav mobile-only share-trigger" aria-label="Share Portfolio">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+            </button>
             <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
                 <span class="nav-toggle-line"></span>
                 <span class="nav-toggle-line"></span>
@@ -50,6 +60,18 @@
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#certifications" class="nav-link">Certifications</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <button class="share-btn-nav desktop-only share-trigger" aria-label="Share Portfolio">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="18" cy="5" r="3"></circle>
+                            <circle cx="6" cy="12" r="3"></circle>
+                            <circle cx="18" cy="19" r="3"></circle>
+                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                        </svg>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -61,14 +83,14 @@
                 <h1 class="hero-title">Sanjai</h1>
                 <h2 class="hero-subtitle">Full Stack Developer | AI Developer</h2>
                 <p class="hero-tagline">Building full stack and AI-powered web solutions. <br>
-                    I build scalable, user-friendly web applications using 
-                    <ul class="her0-tagline">
-                        <li>Java</li>
-                        <li>Spring Boot</li>
-                        <li>React JS</li>
-                        <li>MySQL</li>
-                    </ul>
-                  -  integrating Various Gen AI models and tools to create smart, real-world solutions.</p>
+                    I build scalable, user-friendly web applications using
+                <ul class="her0-tagline">
+                    <li>Java</li>
+                    <li>Spring Boot</li>
+                    <li>React JS</li>
+                    <li>MySQL</li>
+                </ul>
+                - integrating Various Gen AI models and tools to create smart, real-world solutions.</p>
                 <div class="hero-cta">
                     <a href="#projects" class="btn btn-primary">Explore My Work</a>
                     <a href="#contact" class="btn btn-secondary">Let's Collaborate</a>
@@ -222,16 +244,17 @@
             <div class="projects-grid">
                 <article class="project-card" data-animate="fade-up">
                     <div class="project-image">
-                        <img src="assets/project1.png" alt="College Management System preview"
-                            loading="lazy">
+                        <img src="assets/project1.png" alt="College Management System preview" loading="lazy">
                     </div>
                     <div class="project-content">
                         <h3>College Management System</h3>
-                        <p class="project-tagline">College Management System is a full-stack web application that simplifies college academic and administrative management. <br>
-It supports role-based access for Admin, HOD, Faculty, and Students. <br>
-The system manages student records, staff details, and course information efficiently. <br>
-Designed with a responsive interface for smooth access across all devices.</p>
-                        <p class="project-tech">Tech Stack:</strong> HTML • CSS • JavaScript • Node.js • Express • MySQL</p>
+                        <p class="project-tagline">College Management System is a full-stack web application that
+                            simplifies college academic and administrative management. <br>
+                            It supports role-based access for Admin, HOD, Faculty, and Students. <br>
+                            The system manages student records, staff details, and course information efficiently. <br>
+                            Designed with a responsive interface for smooth access across all devices.</p>
+                        <p class="project-tech">Tech Stack:</strong> HTML • CSS • JavaScript • Node.js • Express • MySQL
+                        </p>
                         <div class="project-actions">
                             <a href="#" class="btn btn-tertiary"
                                 aria-label="Open the Movie Recommendation System live link">Live Link</a>
@@ -501,8 +524,9 @@ Designed with a responsive interface for smooth access across all devices.</p>
                         </div>
                         <div class="form-field form-field--full">
                             <label for="message">Project Details</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Tell me about your project"
-                                required aria-required="true" aria-invalid="false"></textarea>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Tell me about your project Inquiries" required aria-required="true"
+                                aria-invalid="false"></textarea>
                             <span class="field-error" aria-live="polite"></span>
                         </div>
                         <button type="submit" class="btn btn-primary contact-submit">Submit Request</button>

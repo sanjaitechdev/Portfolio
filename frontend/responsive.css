@@ -27,6 +27,28 @@ main {
 
 .nav-links.open {
     display: flex;
+    padding-bottom: 1rem;
+}
+
+.nav-links li {
+    width: 100%;
+}
+
+.nav-links .nav-link {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0;
+    justify-content: flex-start;
+    padding: 0.8rem 1.5rem;
+}
+
+[data-theme='light'] .nav-links .nav-link {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.theme-switcher {
+    position: relative;
+    z-index: 1002;
 }
 
 .nav-toggle {
