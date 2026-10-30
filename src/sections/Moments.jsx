@@ -6,9 +6,19 @@ import speech1 from '../assets/speech1.jpg';
 import event1 from '../assets/event1.jpg';
 import award2 from '../assets/award2.jpg';
 import speech2 from '../assets/speech2.jpg';
+import mpnmjPaperImg from '../assets/mpnmj-paper-presentation.jpg';
 
 // Real Moments & Milestones data from Sanjai's events
 const MOMENTS_ITEMS = [
+  {
+    id: 'mpnmj-paper',
+    image: mpnmjPaperImg,
+    title: 'Winner – Paper Presentation',
+    location: 'M.P.N.M.J. Engineering College',
+    tag: '1st Place Winner',
+    icon: Trophy,
+    description: 'Awarded Winner in the Paper Presentation Event during the Intra-College Event at M.P.N.M.J. Engineering College, presenting research on software architecture feasibility and technical viability.'
+  },
   {
     id: 'speech-1',
     image: speech1,
