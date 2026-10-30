@@ -70,92 +70,76 @@ function CounterItem({ targetValue, suffix, label }) {
 
 const TECH_SKILLS = [
   {
-    name: 'Java',
-    category: 'Core & OOP',
+    name: 'Java & Spring Boot',
+    category: 'Backend & Enterprise',
     level: 'Advanced',
     icon: Coffee,
     color: '#E3280C',
-    desc: 'Object-Oriented Programming, Data Structures, Concurrency & Collections'
+    desc: 'Java 21, Spring Boot 3, Spring Data JPA, Security & REST APIs'
   },
   {
-    name: 'React.js',
+    name: 'React.js & Framer Motion',
     category: 'Frontend Architecture',
-    level: 'Intermediate',
+    level: 'Advanced',
     icon: Code2,
     color: '#0284C7',
-    desc: 'Hooks, Component State, Framer Motion, Responsive UI Systems'
+    desc: 'React 19, Component State, Custom Hooks & Fluid UI Animations'
   },
   {
-    name: 'JavaScript',
-    category: 'Modern Web (ES6+)',
+    name: 'Node.js & Express.js',
+    category: 'Backend Runtime',
     level: 'Advanced',
-    icon: FileCode,
-    color: '#F59E0B',
-    desc: 'Asynchronous JS, DOM Manipulation, Event Loop & Functional Patterns'
+    icon: Server,
+    color: '#15803D',
+    desc: 'Scalable REST Endpoints, Middleware, JWT Auth & WebSockets'
   },
   {
-    name: 'MySQL',
-    category: 'Relational Database',
+    name: 'MongoDB & MySQL',
+    category: 'Databases (Relational & NoSQL)',
     level: 'Advanced',
     icon: Database,
     color: '#0D9488',
     desc: 'Schema Design, Complex Queries, Indexing & Normalization'
   },
   {
-    name: 'REST APIs',
+    name: 'AI & LLM Integration',
+    category: 'Intelligent Systems',
+    level: 'Advanced',
+    icon: Sparkles,
+    color: '#E3280C',
+    desc: 'OpenAI SDK, Groq Llama 3.3 70B, Prompt Engineering & Microservices'
+  },
+  {
+    name: 'Data Structures & Algorithms',
+    category: 'Core Computer Science',
+    level: 'Advanced',
+    icon: Binary,
+    color: '#4F46E5',
+    desc: 'Algorithmic Optimization, Complexity Analysis & OOP Design Patterns'
+  },
+  {
+    name: 'JavaScript & Python',
+    category: 'Languages & Scripting',
+    level: 'Advanced',
+    icon: FileCode,
+    color: '#F59E0B',
+    desc: 'ES6+ Asynchronous JS, Python Automation & Fast ML Microservices'
+  },
+  {
+    name: 'REST APIs & Microservices',
     category: 'API Architecture',
     level: 'Advanced',
     icon: Zap,
     color: '#E3280C',
-    desc: 'Endpoint Integration, JSON Data Serialization & Real-time AI APIs'
+    desc: 'High-throughput Endpoints, Redis Caching & Socket.io WebSockets'
   },
   {
-    name: 'HTML5 & CSS3',
-    category: 'Web Standards',
-    level: 'Advanced',
-    icon: Globe,
-    color: '#EA580C',
-    desc: 'Semantic HTML, Tailwind CSS, Flexbox/Grid & Responsive Design'
-  },
-  {
-    name: 'Spring Boot',
-    category: 'Backend Framework',
-    level: 'Familiar',
-    icon: Layers,
-    color: '#16A34A',
-    desc: 'Enterprise Services, Dependency Injection & RESTful Controllers'
-  },
-  {
-    name: 'Node.js',
-    category: 'Backend Runtime',
-    level: 'Familiar',
-    icon: Server,
-    color: '#15803D',
-    desc: 'Express Server, Middleware, API Routing & Backend Integration'
-  },
-  {
-    name: 'Python',
-    category: 'Scripting & Algorithms',
-    level: 'Intermediate',
-    icon: Binary,
-    color: '#4F46E5',
-    desc: 'Data Structures, Algorithmic Problem Solving & Automation'
-  },
-  {
-    name: 'Git & GitHub',
-    category: 'Version Control',
+    name: 'Git & DevOps',
+    category: 'Developer Workflow',
     level: 'Advanced',
     icon: GitBranch,
     color: '#171717',
-    desc: 'Branching, Pull Requests, Version Tracking & Collaboration'
-  },
-  {
-    name: 'VS Code & IDEs',
-    category: 'Developer Environment',
-    level: 'Advanced',
-    icon: Terminal,
-    color: '#2563EB',
-    desc: 'IntelliJ IDEA, Eclipse IDE, VS Code & Antigravity IDE'
+    desc: 'GitHub, Postman, CI/CD Pipelines, Docker Compose & AWS Cloud'
   }
 ];
 
@@ -264,17 +248,17 @@ export default function About() {
 
             {/* Intro Paragraph matching resume */}
             <p className="text-base sm:text-lg lg:text-xl text-neutral-800 leading-snug font-sans font-normal mb-2.5">
-              Hi, I'm <span className="font-extrabold text-neutral-950 underline decoration-[#E3280C] underline-offset-4 tracking-wide">SANJAI K</span>, a passionate Software Engineer & Full Stack Developer pursuing B.Tech in Information Technology at Anna University (MPNMJ Engineering College) with an <span className="text-[#E3280C] font-bold font-mono">8.49 CGPA</span>.
+              Hi, I'm <span className="font-extrabold text-neutral-950 underline decoration-[#E3280C] underline-offset-4 tracking-wide">SANJAI K</span>, an aspiring Software Engineer & Full Stack Developer pursuing B.Tech in Information Technology at M.P.N.M.J. Engineering College with an <span className="text-[#E3280C] font-bold font-mono">8.7 / 10 CGPA</span>.
             </p>
 
             {/* Core Focus & Value Proposition */}
             <p className="text-xs sm:text-sm lg:text-[14.5px] text-neutral-600 leading-relaxed max-w-2xl mb-2.5 font-sans">
-              I specialize in building <span className="font-semibold text-neutral-900">scalable, responsive, and user-focused web applications</span> using modern frontend and backend technologies. I enjoy turning ideas into reliable digital solutions with <span className="font-semibold text-neutral-900">clean code</span>, <span className="font-semibold text-neutral-900">efficient APIs</span>, and <span className="font-semibold text-neutral-900">well-structured databases</span>.
+              I specialize in full-stack web development, <span className="font-semibold text-neutral-900">Java programming, the MERN Stack (MongoDB, Express.js, React.js, Node.js)</span>, and <span className="font-semibold text-neutral-900">AI systems</span>. With a solid foundation in Data Structures, OOP, and RESTful APIs, I build scalable, efficient, and reliable software with clean code and high performance.
             </p>
 
-            {/* Core Skills & Creative Capabilities */}
+            {/* Core Skills & Experience */}
             <p className="text-xs sm:text-sm lg:text-[14.5px] text-neutral-600 leading-relaxed max-w-2xl mb-4 font-sans">
-              My core expertise includes <span className="font-semibold text-neutral-900">React.js, Node.js, Java, MySQL, REST APIs</span>, and <span className="font-semibold text-neutral-900">Git & GitHub</span>, with hands-on experience in developing real-world full-stack applications. I also explore <span className="font-semibold text-neutral-900">AI-powered solutions, content creation, and video editing</span> as additional creative skills.
+              With internship experience spanning <span className="font-semibold text-neutral-900">Full Stack & LLM integration at Strydo Technologies</span>, <span className="font-semibold text-neutral-900">Java 21 & Spring Boot 3 ERP development at Codec Technologies</span>, and <span className="font-semibold text-neutral-900">React 19 & Tailwind CSS engineering at CodeAlpha</span>, I turn complex business challenges into production-grade digital solutions.
             </p>
 
             {/* Continuous Scrolling Skill Icons Ribbon */}

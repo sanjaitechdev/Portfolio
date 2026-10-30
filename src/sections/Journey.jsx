@@ -11,17 +11,17 @@ const EXPERIENCES = [
     index: '01',
     role: 'Full Stack Web Development Intern',
     company: 'Strydo Technologies',
-    fullCompany: 'Strydo Technologies Pvt. Ltd.',
+    fullCompany: 'Strydo Technologies Pvt. Ltd. | India',
     period: 'Jun 2026 – Jul 2026',
     duration: '2 Months',
     location: 'India',
-    badge: 'Full Stack & Database',
-    highlight: 'Architecting scalable web applications across modern frontend, backend, and MySQL database layers with high usability and clean code standards.',
+    badge: 'Full Stack & AI Systems',
+    highlight: 'Integrated LLM APIs across backend controllers and built secure JWT / OAuth authentication with webcam-proctored exam flows.',
     points: [
-      'Developed responsive, high-performance web components using React.js and structured RESTful APIs.',
-      'Designed and integrated MySQL database schemas with application logic for reliable data processing.'
+      'Integrated LLM APIs (OpenAI SDK, Groq Llama 3.3 70B) in 5 backend controllers: AI mentor, interview prep, resume analysis.',
+      'Implemented JWT and Google OAuth 2.0 login and a webcam-proctored exam flow with face detection and integrity scoring.'
     ],
-    techStack: ['React.js', 'Node.js', 'MySQL', 'REST APIs', 'Full Stack']
+    techStack: ['OpenAI SDK', 'Groq Llama 3.3 70B', 'JWT Auth', 'Google OAuth 2.0', 'Face Detection', 'Full Stack']
   },
   {
     id: 'codec',
@@ -29,17 +29,19 @@ const EXPERIENCES = [
     index: '02',
     role: 'Java Developer Intern',
     company: 'Codec Technologies',
-    fullCompany: 'Codec Technologies',
+    fullCompany: 'Codec Technologies | Hybrid, India',
     period: 'Jan 2026 – Apr 2026',
     duration: '4 Months',
     location: 'Hybrid, India',
-    badge: 'Core Java & Backend',
-    highlight: 'Engineering robust Java software using Object-Oriented Programming (OOP), multithreading, and optimized backend algorithms.',
+    badge: 'Java 21 & Spring Boot 3',
+    highlight: 'Developed an enterprise ERP backend with 115 REST endpoints, Spring Security role guards, STOMP WebSockets, and Docker Compose.',
     points: [
-      'Developed modular Java backend services utilizing core Data Structures and efficient algorithms.',
-      'Integrated backend logic with relational MySQL databases to streamline core application workflows.'
+      'Developed an ERP backend (Java 21, Spring Boot 3): 115 REST endpoints, 20 controllers, 10 services, 28 JPA repositories.',
+      'Designed 29 JPA entities in MySQL and secured endpoints using JWT, Spring Security and 8 roles (38 @PreAuthorize guards).',
+      'Built STOMP WebSocket live updates and containerized the backend, frontend and MySQL 8 with Docker Compose.',
+      'Generated a test dataset of 4,440 students, 423 faculty and 444,000 attendance records across 25 departments.'
     ],
-    techStack: ['Java', 'OOP', 'Data Structures', 'MySQL', 'Multithreading', 'Backend']
+    techStack: ['Java 21', 'Spring Boot 3', 'Spring Security', 'JPA / MySQL', 'STOMP WebSockets', 'Docker Compose']
   },
   {
     id: 'codealpha',
@@ -47,35 +49,36 @@ const EXPERIENCES = [
     index: '03',
     role: 'Frontend Development Intern',
     company: 'CodeAlpha',
-    fullCompany: 'CodeAlpha',
+    fullCompany: 'CodeAlpha | Chennai, Tamil Nadu',
     period: 'Nov 2025 – Dec 2025',
     duration: '2 Months',
     location: 'Chennai, TN',
-    badge: 'Frontend & UI Architecture',
-    highlight: 'Developing responsive React.js user interfaces with dynamic API integration, clean styling, and smooth interactions.',
+    badge: 'React 19 & Performance',
+    highlight: 'Designed a responsive React 19 portfolio with 10 sections and 10 reusable components, optimized to 138 kB gzipped JS and 13 kB gzipped CSS.',
     points: [
-      'Engineered interactive React components with modern ES6+ JavaScript, HTML5, and responsive CSS3.',
-      'Connected frontend state seamlessly with backend APIs for real-time data rendering and smooth navigation.'
+      'Designed a responsive React 19 and Tailwind CSS portfolio with 10 sections and 10 reusable components.',
+      'Implemented Framer Motion animations in 15 files; the production build is 138 kB gzipped JS and 13 kB gzipped CSS.'
     ],
-    techStack: ['React.js', 'JavaScript (ES6+)', 'HTML5 & CSS3', 'REST APIs', 'UI/UX']
+    techStack: ['React 19', 'Tailwind CSS', 'Framer Motion', 'UI Architecture', 'Bundle Optimization']
   },
   {
     id: 'academics',
     type: 'education',
     index: '04',
-    role: 'B.Tech. Information Technology',
-    company: 'Anna University (MPNMJ)',
-    fullCompany: 'MPNMJ Engineering College • Anna University',
-    period: '2023 – 2027',
+    role: 'B.Tech. – Information Technology',
+    company: 'M.P.N.M.J. Engineering College',
+    fullCompany: 'M.P.N.M.J. Engineering College | Erode, Tamil Nadu',
+    period: '2023 – 2027 (Expected)',
     duration: '4 Years Degree',
     location: 'Erode, Tamil Nadu',
-    badge: 'Academic Distinction',
-    highlight: 'Pursuing B.Tech in Information Technology with consistent academic distinction (8.49 CGPA) and strong core computer science mastery.',
+    badge: 'CGPA: 8.7 / 10',
+    highlight: 'Pursuing undergraduate degree in Information Technology with consistent academic distinction (8.7 / 10 CGPA), 100% in SSLC, and 85% in HSC.',
     points: [
-      'B.Tech Information Technology — Anna University MPNMJ (2023–2027) with CGPA 8.49 / 10.',
-      'Higher Secondary Certificate (HSC) — Nellorepet Govt Boys HSS (2023) with 85% Aggregate.'
+      'B.Tech. Information Technology (2023–2027 Expected) — M.P.N.M.J. Engineering College (CGPA: 8.7 / 10).',
+      'Secondary School Leaving Certificate (SSLC) (2021 Completed) — Nellorepet Govt Boys HSS (100% Score).',
+      'Higher Secondary Certificate (HSC) (2021–2023 Completed) — Nellorepet Govt Boys HSS (85% Aggregate).'
     ],
-    techStack: ['B.Tech IT (8.49 CGPA)', 'HSC (85%)', 'Data Structures', 'DBMS', 'OOP']
+    techStack: ['B.Tech IT (8.7 CGPA)', 'SSLC (100%)', 'HSC (85%)', 'Data Structures', 'DBMS', 'Java OOP']
   }
 ];
 

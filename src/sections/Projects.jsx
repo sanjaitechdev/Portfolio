@@ -1,61 +1,58 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
-  Compass, BookOpen, ExternalLink, ArrowUpRight,
-  Sparkles, Layers, Eye, Maximize2, Zap, Lock,
-  CheckCircle2, Code2, Briefcase, ArrowDown
+  Compass, BookOpen, ArrowUpRight,
+  Briefcase, ArrowDown
 } from 'lucide-react';
 import { GithubIcon } from '../components/SocialIcons';
 import ProjectModal from '../components/ProjectModal';
-import smartHarvestImg from '../assets/smart-harvest.jpg';
-import managementSystemImg from '../assets/management-system.jpg';
 import tenshiroImg from '../assets/tenshiro-platform.png';
 import agriconnectImg from '../assets/agriconnect-platform.jpg';
 
 const PROJECTS_DATA = [
   {
-    id: 'career-ai',
+    id: 'harvion-ai',
     number: '01',
-    badge: 'AI & Full Stack',
-    title: 'Tenshiro – AI Career Navigation Platform',
-    period: 'Apr – Jun 2025',
-    icon: Compass,
-    image: tenshiroImg,
-    previewUrl: 'https://tenshiro.sanjaidev.io',
-    shortDescription: 'AI-powered recommendation engine providing personalized career roadmaps, course suggestions, and internship matching with real-time insights.',
-    fullDescription: 'Developed an AI-powered platform for career, course, project, and internship recommendations. Integrated real-time data feeds and AI APIs to provide tailored career insights. Architected responsive React.js interfaces paired with a scalable Node.js backend and MySQL database.',
-    githubUrl: 'https://github.com/sanjaitechdev',
-    liveUrl: 'https://github.com/sanjaitechdev',
-    tags: ['React.js', 'Node.js', 'MySQL', 'AI APIs', 'Real-Time Sync'],
-    stats: {
-      metric1: 'AI Career Insights',
-      metric2: '<30ms Query Latency',
-      metric3: '100% Responsive'
-    },
-    challenges: 'Aggregating and normalizing multidimensional career, course, and internship data dynamically in real-time.',
-    solution: 'Engineered scalable Node.js endpoints integrated with AI APIs and indexed MySQL schemas for instant query retrieval.'
-  },
-  {
-    id: 'agriconnect',
-    number: '02',
-    badge: 'AgriTech & Full Stack',
-    title: 'AgriConnect – Demand-Guided Agri Intelligence',
-    period: 'Jan – Mar 2025',
+    badge: 'AgriTech & Full Stack AI',
+    title: 'Harvion AI – Smart Agricultural System',
+    period: '2025',
     icon: BookOpen,
     image: agriconnectImg,
-    previewUrl: 'https://agriconnect.sanjaidev.io',
-    shortDescription: 'Real-time APMC mandi intelligence, pre-harvest contract matching, and smart distress sale rescue for Indian agriculture connecting 12,000+ farmers.',
-    fullDescription: 'Architected AgriConnect, an intelligent agricultural platform empowering 12,000+ verified farmers and 2,400+ buyers across 150+ APMC mandis. Features live mandi price aggregation, demand-driven pre-harvest contract matching, and instant distress sale alerts built with React.js, Node.js, and MySQL.',
-    githubUrl: 'https://github.com/sanjaitechdev',
-    liveUrl: 'https://github.com/sanjaitechdev',
-    tags: ['React.js', 'Node.js', 'MySQL', 'APMC Mandi APIs', 'Live Tracking', 'Contract Matching'],
+    previewUrl: 'https://agri-pulse-pied.vercel.app/',
+    shortDescription: 'Full-stack smart agriculture platform (39 pages, 74 APIs, 20 data models) with Random Forest crop prediction (29 crops), Redis caching, and 8-language UI.',
+    fullDescription: 'Engineered a full-stack agri platform (React.js, Node.js, Express.js, MongoDB, FastAPI): 39 pages, 74 APIs, 20 data models. Trained a Random Forest crop model (29 crops, 8,700 synthetic samples); 8 passing unit tests validate the decision engine. Secured APIs with JWT role-based access, rate limiting and Redis caching; added Socket.io alerts and an 8-language UI.',
+    githubUrl: 'https://github.com/sanjaitechdev/AgriPulse',
+    liveUrl: 'https://agri-pulse-pied.vercel.app/',
+    tags: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'FastAPI', 'Random Forest', 'Redis', 'Socket.io', 'JWT'],
     stats: {
-      metric1: '12,000+ Verified Farmers',
-      metric2: '2,400+ Active Buyers',
-      metric3: '150+ APMC Mandis'
+      metric1: '39 Pages & 74 APIs',
+      metric2: '29 Crops (8.7k Samples)',
+      metric3: '8-Language UI & Socket.io'
     },
-    challenges: 'Consolidating fragmented mandi price feeds and enabling seamless, real-time trading with multi-role access for farmers, buyers, and admins.',
-    solution: 'Built high-concurrency Node.js endpoints, optimized SQL schema indexing, and a responsive mobile-first React interface with 1-click instant demo access.'
+    challenges: 'Training and validating multi-factor soil and weather decision models while maintaining sub-second API latencies under concurrent usage.',
+    solution: 'Decoupled the Random Forest decision engine into a FastAPI microservice backed by Redis caching, MongoDB data models, and Socket.io alerts.'
+  },
+  {
+    id: 'career-ai',
+    number: '02',
+    badge: 'AI & Full Stack',
+    title: 'Tenshiro – AI Career Navigation Platform',
+    period: '2025',
+    icon: Compass,
+    image: tenshiroImg,
+    previewUrl: 'https://tenshiro.vercel.app/',
+    shortDescription: 'AI career platform (23 pages, 74 REST endpoints, 15 tables) delivering mentoring, roadmaps, interview prep and resume analysis across 18 domains & 153 roles.',
+    fullDescription: 'Developed an AI career platform (React.js, Node.js, MySQL, OpenAI SDK): 23 pages, 74 REST endpoints, 15 tables. Delivered AI mentoring, roadmaps, interview prep and resume analysis across 18 domains and 153 roles with Groq Llama 3.3 70B and OpenAI SDK.',
+    githubUrl: 'https://github.com/sanjaitechdev/Tenshiro',
+    liveUrl: 'https://tenshiro.vercel.app/',
+    tags: ['React.js', 'Node.js', 'MySQL', 'OpenAI SDK', 'Groq Llama 3.3 70B', 'REST APIs', 'AI Mentoring'],
+    stats: {
+      metric1: '18 Domains & 153 Roles',
+      metric2: '74 REST Endpoints',
+      metric3: '23 Pages & 15 Tables'
+    },
+    challenges: 'Orchestrating multi-model LLM inferences (OpenAI SDK & Groq Llama 3.3 70B) for real-time interview prep and personalized resume scoring.',
+    solution: 'Built modular backend controllers with MySQL relational indexing, structured JSON prompt pipelines, and responsive React state management.'
   }
 ];
 
@@ -80,11 +77,9 @@ export default function Projects() {
 
         {/* Compact, Animated 2-Column Project Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-          {PROJECTS_DATA.map((project, idx) => {
-            const Icon = project.icon;
-            return (
-              <motion.div
-                key={project.id}
+          {PROJECTS_DATA.map((project, idx) => (
+            <motion.div
+              key={project.id}
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
@@ -197,8 +192,7 @@ export default function Projects() {
                   </a>
                 </div>
               </motion.div>
-            );
-          })}
+            ))}
         </div>
 
         {/* Compact Transition Pill into Journey */}

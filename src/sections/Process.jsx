@@ -164,8 +164,8 @@ export default function Process() {
         </div>
       </div>
 
-      {/* 2. UNIQUE CYBERPUNK ARCHITECTURAL TECH NOTCH SEPARATOR (Services -> Skills) */}
-      <div className="relative w-full overflow-hidden bg-gradient-to-b from-[#060608] via-neutral-900 to-[#F9FAFB] pt-8 pb-0">
+      {/* 2. ARCHITECTURAL TRANSITION SEPARATOR (Services -> Projects) */}
+      <div className="relative w-full overflow-hidden bg-gradient-to-b from-[#060608] via-neutral-900 to-white pt-8 pb-0">
 
         {/* Horizontal Laser Line with Glowing Red Pulse Core */}
         <div className="relative w-full flex items-center justify-center">
@@ -174,28 +174,35 @@ export default function Process() {
           </div>
 
           {/* Center High-Tech Hexagonal Badge */}
-          <div className="relative z-10 flex items-center gap-3 px-6 py-2.5 rounded-full bg-neutral-950 border-2 border-white/20 text-white shadow-2xl shadow-black/90 backdrop-blur-xl">
+          <a
+            href="#projects"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="group relative z-10 flex items-center gap-3 px-6 py-2.5 rounded-full bg-neutral-950 border-2 border-white/20 hover:border-[#E3280C] text-white shadow-2xl shadow-black/90 backdrop-blur-xl transition-all cursor-pointer hover:scale-105"
+          >
             <span className="flex h-2 w-2 relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E3280C] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#E3280C]"></span>
             </span>
 
             <span className="text-xs font-mono font-black tracking-[0.25em] text-white uppercase">
-              TECH STACK // ARCHITECTURE
+              FEATURED WORK
             </span>
 
             <div className="w-px h-3.5 bg-white/20 mx-0.5" />
 
             <span className="text-[10px] font-mono font-bold text-[#E3280C] uppercase tracking-wider">
-              CORE CAPABILITIES
+              EXPLORE PROJECTS
             </span>
 
-            <ArrowDown size={14} className="text-neutral-400 animate-bounce" />
-          </div>
+            <ArrowDown size={14} className="text-neutral-400 group-hover:text-[#E3280C] group-hover:translate-y-0.5 transition-transform" />
+          </a>
         </div>
 
-        {/* Slanted Geometric Light Base transitioning into Skills Section */}
-        <div className="w-full h-12 sm:h-16 mt-6 bg-[#F9FAFB] [clip-path:polygon(0_60%,50%_0%,100%_60%,100%_100%,0_100%)] shadow-inner" />
+        {/* Slanted Geometric Light Base transitioning into Projects Section */}
+        <div className="w-full h-12 sm:h-16 mt-6 bg-white [clip-path:polygon(0_60%,50%_0%,100%_60%,100%_100%,0_100%)] shadow-inner" />
       </div>
 
     </section>

@@ -116,7 +116,7 @@ export default function Hero() {
               transition={{ delay: 0.3, duration: 0.6 }}
               className="text-xl sm:text-2xl lg:text-3xl font-sans font-black tracking-tight text-white mb-4 leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]"
             >
-              Full Stack Developer <span className="text-[#E3280C]">|</span> Content Creator <span className="text-[#E3280C]">&</span> Video Editor
+              Software Engineer <span className="text-[#E3280C]">|</span> Full Stack Developer
             </motion.h2>
 
             {/* Summary Bio from Resume */}
@@ -126,7 +126,7 @@ export default function Hero() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-sm sm:text-base lg:text-lg text-neutral-200 leading-relaxed font-sans max-w-xl mb-6 font-normal drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
             >
-             Full Stack Developer and Software Engineer specializing in building scalable, high-performance web applications. Experienced in developing modern frontend and backend solutions, with additional expertise in AI-powered applications, content creation, and video editing.
+              Aspiring Software Engineer skilled in full-stack web development, Java programming, the MERN Stack (MongoDB, Express.js, React.js, Node.js), and AI systems. Strong foundation in Data Structures, OOP, RESTful APIs, and building scalable, reliable software.
             </motion.p>
 
             {/* Key Checkmark List from Resume */}
@@ -138,15 +138,15 @@ export default function Hero() {
             >
               <div className="flex items-center gap-3 text-xs sm:text-sm font-sans font-semibold text-neutral-100 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
                 <span className="text-[#E3280C] font-black text-base leading-none">✓</span>
-                <span>Full Stack Web Development with React.js, Node.js & MySQL</span>
+                <span>Full Stack Web Development with React.js, Node.js & MERN Stack</span>
               </div>
               <div className="flex items-center gap-3 text-xs sm:text-sm font-sans font-semibold text-neutral-100 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
                 <span className="text-[#E3280C] font-black text-base leading-none">✓</span>
-                <span>Core Java, OOP Architectures & Robust REST APIs</span>
+                <span>Java 21, Spring Boot 3, Spring Data JPA & Robust REST APIs</span>
               </div>
               <div className="flex items-center gap-3 text-xs sm:text-sm font-sans font-semibold text-neutral-100 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
                 <span className="text-[#E3280C] font-black text-base leading-none">✓</span>
-                <span>AI-Powered Solutions, Content Creation & Video Editing</span>
+                <span>AI System Integration (OpenAI SDK, Groq Llama 3.3 70B & ML)</span>
               </div>
             </motion.div>
 

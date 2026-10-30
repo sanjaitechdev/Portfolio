@@ -1,58 +1,67 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Award, CheckCircle2, BookOpen, Terminal,
-  Sparkles, Layers, ShieldCheck, Cpu,
-  Code2, ExternalLink, Check, Zap, Globe, Server, Database,
-  FileCheck, Lock, ArrowUpRight, X, ArrowDown
+  Award, BookOpen, Terminal,
+  Sparkles, Layers, Cpu,
+  Code2, ExternalLink, Globe, Server, Database,
+  ArrowUpRight, X, ArrowDown, Binary, Trophy
 } from 'lucide-react';
 import { portfolioData } from '../data/portfolio';
-
-// 4-Point Sparkle Star Component
-function StarSparkle({ className = '', style = {} }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} style={style}>
-      <path d="M12 0C12 6.627 6.627 12 0 12C6.627 12 12 17.373 12 24C12 17.373 17.373 12 24 12C17.373 12 12 6.627 12 0Z" />
-    </svg>
-  );
-}
 
 const SKILL_GROUPS = [
   {
     number: '01',
-    title: 'Advanced Programming',
+    title: 'Programming Languages',
     badge: 'Core Competency',
     icon: Code2,
     isPrimary: true,
-    skills: ['HTML', 'CSS', 'JavaScript', 'Java', 'MySQL', 'APIs'],
-    description: 'Technologies mastered with advanced competency across frontend structures, object-oriented Java, relational databases, and REST APIs.'
+    skills: ['Java', 'JavaScript', 'Python', 'C', 'SQL'],
+    description: 'Strong foundation in Java OOP, asynchronous ES6+ JavaScript, Python automation, and optimized SQL relational queries.'
   },
   {
     number: '02',
-    title: 'Intermediate Frameworks',
-    badge: 'Hands-on Frameworks',
-    icon: Cpu,
+    title: 'Frontend Development',
+    badge: 'Modern UI Systems',
+    icon: Sparkles,
     isPrimary: false,
-    skills: ['Python', 'React.js'],
-    description: 'Practical component-driven frontend engineering and scripting for data processing and algorithmic problem solving.'
+    skills: ['React.js', 'Framer Motion', 'HTML5', 'CSS3', 'Tailwind CSS'],
+    description: 'Component architecture, custom React hooks, fluid Framer Motion animations, and responsive cross-device UI design.'
   },
   {
     number: '03',
-    title: 'Backend & Services',
-    badge: 'Backend & Cloud',
+    title: 'Backend & APIs',
+    badge: 'Microservices & Enterprise',
     icon: Server,
     isPrimary: false,
-    skills: ['Spring Boot', 'Node.js'],
-    description: 'Working knowledge of enterprise Java frameworks and asynchronous Node.js backend runtimes.'
+    skills: ['Node.js', 'Express.js', 'Spring Boot 3', 'Spring Data JPA', 'REST APIs', 'Microservices'],
+    description: 'Enterprise Java 21 backend services, Spring Security, JWT authentication, and high-concurrency Node.js endpoints.'
   },
   {
     number: '04',
-    title: 'Tools & Technologies',
-    badge: 'Developer Workflow',
+    title: 'Databases & Storage',
+    badge: 'Relational & NoSQL',
+    icon: Database,
+    isPrimary: false,
+    skills: ['MySQL', 'MongoDB', 'PostgreSQL', 'Firebase'],
+    description: 'Relational schema indexing, document data models, transactions, and real-time cloud data stores.'
+  },
+  {
+    number: '05',
+    title: 'Core Computer Science',
+    badge: 'CS Fundamentals',
+    icon: Binary,
+    isPrimary: false,
+    skills: ['Data Structures & Algorithms', 'OOP Principles', 'DBMS', 'System Design', 'SDLC', 'Complexity Analysis'],
+    description: 'Rigorous theoretical and applied computer science covering algorithm complexity, design patterns, and maintainable architectures.'
+  },
+  {
+    number: '06',
+    title: 'AI Systems & Tools',
+    badge: 'Generative AI & DevOps',
     icon: Terminal,
     isPrimary: false,
-    skills: ['Git', 'GitHub', 'VS Code', 'Eclipse IDE', 'IntelliJ IDEA', 'Antigravity'],
-    description: 'Modern version control, cloud collaboration platforms, and professional IDE environments.'
+    skills: ['AI API Integration', 'LLMs', 'OpenAI SDK', 'Groq Llama 3.3 70B', 'Git & GitHub', 'Postman', 'CI/CD Pipelines', 'AWS Cloud'],
+    description: 'LLM controller integration, AI mentor workflows, automated prompt pipelines, Git version control, and API testing.'
   }
 ];
 
@@ -61,62 +70,58 @@ const CERTIFICATE_DETAILS = [
     id: 'ibm-fullstack',
     number: '01',
     title: 'Full Stack Software Developer',
-    subtitle: 'Professional Certificate',
+    subtitle: 'IBM Professional Certificate',
     issuer: 'IBM',
     badge: 'Verified Credential',
     brandColor: '#1D4ED8',
     icon: Globe,
-    serialNumber: 'IBM-FSD-9842',
-    description: 'Comprehensive software engineering covering full-stack web architecture, cloud deployment, and relational databases.',
-    skills: ['Full Stack', 'Cloud Microservices', 'React & Node.js', 'MySQL']
+    serialNumber: 'IBM-PROF-FSD-01',
+    verifyUrl: 'https://coursera.org/share/a2878bc5b37784ab537b6c102095e6c4',
+    description: 'Comprehensive software engineering covering full-stack web architecture, cloud deployment, containerization, microservices, and database integration.',
+    skills: ['Full Stack', 'Cloud Native', 'React & Node.js', 'Microservices', 'REST APIs']
+  },
+  {
+    id: 'nptel-java',
+    number: '02',
+    title: 'Programming in Java',
+    subtitle: 'NPTEL Online Certification',
+    issuer: 'NPTEL',
+    badge: 'Verified Credential',
+    brandColor: '#F59E0B',
+    icon: Terminal,
+    serialNumber: 'NPTEL-JAVA-IIT',
+    verifyUrl: 'https://drive.google.com/file/d/11u-FQ9AgsfdMxkUDLDPh-Kj0ALydrcRY/view?usp=drive_link',
+    description: 'In-depth Object-Oriented Programming (OOP) in Java, data structures, algorithms, multithreading, collections framework, and clean code principles.',
+    skills: ['Java OOP', 'Multithreading', 'Collections', 'Data Structures', 'Algorithms']
   },
   {
     id: 'google-ai',
-    number: '02',
-    title: 'AI Essentials | Prompting',
-    subtitle: 'Generative AI & Prompting',
+    number: '03',
+    title: 'AI Essentials & Prompting Essentials',
+    subtitle: 'Google Professional Specialization',
     issuer: 'Google',
     badge: 'Verified Credential',
     brandColor: '#10B981',
     icon: Sparkles,
-    serialNumber: 'GOOG-AI-3312',
-    description: 'Generative AI foundational principles, LLM prompt engineering architectures, and real-world AI API workflows.',
-    skills: ['Generative AI', 'Prompt Engineering', 'LLM Architectures', 'AI APIs']
+    serialNumber: 'GOOGLE-AI-PROMPT',
+    verifyUrl: 'https://coursera.org/share/de2d8ee38efcd9223916868bae78dbff',
+    description: 'Generative AI foundational principles, LLM architecture, prompt engineering techniques, and practical AI application integration.',
+    skills: ['Generative AI', 'Prompt Engineering', 'LLM Architectures', 'AI Workflows']
   },
   {
-    id: 'nptel-java',
-    number: '03',
-    title: 'Programming in Java (Elite)',
-    subtitle: 'IIT Kharagpur NPTEL',
-    issuer: 'NPTEL',
-    badge: 'Elite Credential',
-    brandColor: '#F59E0B',
-    icon: Terminal,
-    serialNumber: 'NPTEL-JAVA-ELITE',
-    description: 'Advanced Core Java OOP, multithreading, concurrency patterns, collections framework, and algorithmic problem solving.',
-    skills: ['Java OOP', 'Multithreading', 'Collections', 'Data Structures']
-  },
-  {
-    id: 'oracle-genai',
+    id: 'hackerrank-swe',
     number: '04',
-    title: 'GenAI Professional',
-    subtitle: 'Enterprise AI Architecture',
-    issuer: 'Oracle',
-    badge: 'OCI Professional',
-    brandColor: '#E3280C',
-    icon: Cpu,
-    serialNumber: 'ORA-GENAI-7740',
-    description: 'Enterprise Generative AI architecture, vector database embeddings, LLM fine-tuning, and scalable cloud deployments.',
-    skills: ['Enterprise AI', 'Vector Embeddings', 'Model Deployment', 'OCI Cloud']
+    title: 'Software Engineer',
+    subtitle: 'HackerRank Verified Skill Certificate',
+    issuer: 'HackerRank',
+    badge: 'Verified Credential',
+    brandColor: '#16A34A',
+    icon: Code2,
+    serialNumber: 'HACKERRANK-08D0C7B8',
+    verifyUrl: 'https://www.hackerrank.com/certificates/08d0c7b8d04e',
+    description: 'Rigorous benchmark assessing core problem solving, data structures, algorithms, SQL queries, and software engineering principles.',
+    skills: ['Problem Solving', 'Data Structures', 'SQL & Databases', 'System Design']
   }
-];
-
-const COURSEWORK_TILES = [
-  { title: 'Data Structures & Algorithms', highlight: 'Optimization & Analysis', icon: Code2 },
-  { title: 'Database Management Systems', highlight: 'SQL & Relational Schemas', icon: Database },
-  { title: 'Object-Oriented Programming', highlight: 'Design Patterns & Java', icon: Server },
-  { title: 'Operating Systems', highlight: 'Concurrency & Memory', icon: Cpu },
-  { title: 'Computer Networks', highlight: 'Protocols & Architecture', icon: Globe }
 ];
 
 export default function Skills() {
@@ -141,16 +146,16 @@ export default function Skills() {
           </div>
 
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-sans font-black text-neutral-950 tracking-tight leading-[1.08] mb-4">
-            Technical skills built on a strong foundation.
+            Technical skills built on a strong foundation<span className="text-[#E3280C]">.</span>
           </h2>
 
           <p className="text-base sm:text-lg text-neutral-600 leading-relaxed font-sans max-w-2xl">
-            A focused breakdown of programming languages, frameworks, relational databases, and developer tools from my academic and internship journey.
+            A comprehensive breakdown of programming languages, frontend systems, backend services, relational & NoSQL databases, core computer science, and AI technologies.
           </p>
         </div>
 
-        {/* 4 Skill Cards with Increased Font Size & Readability */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-7 mb-16 sm:mb-20">
+        {/* Skill Groups Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 sm:mb-20">
           {SKILL_GROUPS.map((group, idx) => {
             const Icon = group.icon;
             const isFirst = idx === 0;
@@ -162,56 +167,61 @@ export default function Skills() {
                 viewport={{ once: true, margin: '-30px' }}
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
                 whileHover={{ y: -6, scale: 1.01 }}
-                className={`p-8 sm:p-10 rounded-[28px] border-2 transition-all duration-300 flex flex-col justify-between shadow-xl relative group ${isFirst
-                  ? 'bg-neutral-900 border-white/20 text-white hover:border-[#E3280C]'
-                  : 'bg-white border-neutral-200 text-neutral-950 hover:border-[#E3280C] hover:shadow-2xl'
-                  }`}
+                className={`p-7 sm:p-8 rounded-[28px] border-2 transition-all duration-300 flex flex-col justify-between shadow-xl relative group ${
+                  isFirst
+                    ? 'bg-neutral-900 border-white/20 text-white hover:border-[#E3280C]'
+                    : 'bg-white border-neutral-200 text-neutral-950 hover:border-[#E3280C] hover:shadow-2xl'
+                }`}
               >
                 <div>
                   {/* Top Row: Number, Badge & Icon */}
-                  <div className="flex items-start justify-between mb-6">
+                  <div className="flex items-start justify-between mb-5">
                     <div className="flex items-baseline gap-3">
-                      <span className="text-4xl sm:text-5xl font-sans font-black text-[#E3280C] leading-none">
+                      <span className="text-3xl sm:text-4xl font-sans font-black text-[#E3280C] leading-none">
                         {group.number}
                       </span>
                       <span
-                        className={`px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider ${isFirst ? 'bg-white/10 text-white border border-white/15' : 'bg-neutral-100 text-neutral-700 border border-neutral-200'
-                          }`}
+                        className={`px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider ${
+                          isFirst ? 'bg-white/10 text-white border border-white/15' : 'bg-neutral-100 text-neutral-700 border border-neutral-200'
+                        }`}
                       >
                         {group.badge}
                       </span>
                     </div>
 
-                    <div className={`p-2.5 rounded-2xl ${isFirst ? 'bg-white/10 text-white' : 'bg-neutral-100 text-neutral-900'} group-hover:bg-[#E3280C] group-hover:text-white transition-all`}>
-                      <Icon size={24} strokeWidth={1.8} />
+                    <div className={`p-2 rounded-2xl ${isFirst ? 'bg-white/10 text-white' : 'bg-neutral-100 text-neutral-900'} group-hover:bg-[#E3280C] group-hover:text-white transition-all`}>
+                      <Icon size={22} strokeWidth={1.8} />
                     </div>
                   </div>
 
                   {/* Title */}
                   <h3
-                    className={`text-2xl sm:text-3xl font-sans font-black tracking-tight leading-snug mb-3 ${isFirst ? 'text-white' : 'text-neutral-950'
-                      }`}
+                    className={`text-xl sm:text-2xl font-sans font-black tracking-tight leading-snug mb-2.5 ${
+                      isFirst ? 'text-white' : 'text-neutral-950'
+                    }`}
                   >
                     {group.title}
                   </h3>
 
                   {/* Description */}
                   <p
-                    className={`text-sm sm:text-base leading-relaxed mb-6 font-sans ${isFirst ? 'text-neutral-300' : 'text-neutral-600'
-                      }`}
+                    className={`text-xs sm:text-sm leading-relaxed mb-5 font-sans ${
+                      isFirst ? 'text-neutral-300' : 'text-neutral-600'
+                    }`}
                   >
                     {group.description}
                   </p>
 
                   {/* Skill Pills */}
-                  <div className="flex flex-wrap gap-2 pt-1">
+                  <div className="flex flex-wrap gap-1.5 pt-1">
                     {group.skills.map((skill, sIdx) => (
                       <span
                         key={sIdx}
-                        className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-mono font-bold transition-all duration-200 hover:scale-105 ${isFirst
-                          ? 'bg-white/10 text-white border border-white/20 hover:bg-white hover:text-neutral-950'
-                          : 'bg-neutral-100 text-neutral-800 border border-neutral-200 hover:bg-[#E3280C] hover:text-white hover:border-[#E3280C]'
-                          }`}
+                        className={`px-2.5 py-1 rounded-xl text-xs font-mono font-bold transition-all duration-200 hover:scale-105 ${
+                          isFirst
+                            ? 'bg-white/10 text-white border border-white/20 hover:bg-white hover:text-neutral-950'
+                            : 'bg-neutral-100 text-neutral-800 border border-neutral-200 hover:bg-[#E3280C] hover:text-white hover:border-[#E3280C]'
+                        }`}
                       >
                         {skill}
                       </span>
@@ -220,13 +230,13 @@ export default function Skills() {
                 </div>
 
                 {/* Bottom Red Accent Line */}
-                <div className="w-12 h-1 bg-[#E3280C] rounded-full mt-8 group-hover:w-24 transition-all duration-300" />
+                <div className="w-10 h-1 bg-[#E3280C] rounded-full mt-6 group-hover:w-20 transition-all duration-300" />
               </motion.div>
             );
           })}
         </div>
 
-        {/* 2. SLEEK, COMPACT & UNIQUE SEPARATOR (Skills -> Certifications) */}
+        {/* 2. SLEEK SEPARATOR (Skills -> Certifications) */}
         <div className="relative w-full my-12 sm:my-16 flex items-center justify-center">
           <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-neutral-300 to-transparent" />
 
@@ -239,7 +249,7 @@ export default function Skills() {
           </div>
         </div>
 
-        {/* 3. VERA LEVEL CERTIFICATIONS VAULT */}
+        {/* 3. VERIFIED CERTIFICATIONS VAULT */}
         <div className="relative mb-16 sm:mb-20">
 
           {/* Section Header */}
@@ -253,7 +263,7 @@ export default function Skills() {
               </div>
 
               <h3 className="text-3xl sm:text-4xl lg:text-5xl font-sans font-black text-neutral-950 tracking-tight">
-                Verified Certifications
+                Verified Certifications<span className="text-[#E3280C]">.</span>
               </h3>
             </div>
 
@@ -262,7 +272,7 @@ export default function Skills() {
             </div>
           </div>
 
-          {/* 4 Digital Credential Cards Grid with Clear, Prominent Typography */}
+          {/* 4 Digital Credential Cards Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {CERTIFICATE_DETAILS.map((cert, idx) => {
               const Icon = cert.icon;
@@ -325,13 +335,19 @@ export default function Skills() {
                       </div>
                     </div>
 
-                    {/* Footer */}
+                    {/* Footer with direct external verify link */}
                     <div className="pt-3.5 border-t border-neutral-100 flex items-center justify-between text-xs font-mono">
                       <span className="text-neutral-500 font-bold">{cert.serialNumber}</span>
-                      <span className="inline-flex items-center gap-1 text-[#E3280C] font-bold group-hover:translate-x-0.5 transition-transform">
-                        <span>View</span>
+                      <a
+                        href={cert.verifyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-1 text-[#E3280C] font-bold hover:underline group-hover:translate-x-0.5 transition-transform"
+                      >
+                        <span>Verify</span>
                         <ArrowUpRight size={14} />
-                      </span>
+                      </a>
                     </div>
 
                   </div>
@@ -342,46 +358,59 @@ export default function Skills() {
 
         </div>
 
-        {/* 4. UNDERGRADUATE COURSEWORK & INTERESTS (Bento) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 items-start">
+        {/* 4. ACHIEVEMENTS & PARTICIPATION */}
+        <div className="mb-16 sm:mb-20">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-100 border border-red-200 mb-3">
+                <Trophy size={15} className="text-[#E3280C]" />
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#E3280C]">
+                  Honors & Recognition
+                </span>
+              </div>
 
-          {/* Left: Undergraduate Coursework Matrix */}
-          <div className="lg:col-span-8 p-7 sm:p-9 rounded-[28px] bg-white border-2 border-neutral-200 shadow-md">
-            <div className="flex items-center gap-2 mb-6">
-              <BookOpen size={20} className="text-[#E3280C]" />
-              <h4 className="text-2xl font-sans font-black text-neutral-950 tracking-tight">
-                Undergraduate Coursework
-              </h4>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-              {COURSEWORK_TILES.map((tile, tIdx) => {
-                const TileIcon = tile.icon;
-                return (
-                  <motion.div
-                    key={tIdx}
-                    whileHover={{ y: -3, scale: 1.01 }}
-                    className="p-5 rounded-2xl bg-[#F9FAFB] border border-neutral-200 hover:border-[#E3280C]/40 hover:bg-white transition-all shadow-sm flex flex-col justify-between"
-                  >
-                    <div>
-                      <div className="w-8 h-8 rounded-xl bg-red-100 text-[#E3280C] flex items-center justify-center mb-3">
-                        <TileIcon size={16} />
-                      </div>
-                      <div className="font-sans font-bold text-sm sm:text-base text-neutral-950 mb-1">
-                        {tile.title}
-                      </div>
-                    </div>
-                    <div className="text-xs font-mono text-neutral-600 mt-2.5 pt-2 border-t border-neutral-200/60 font-semibold">
-                      {tile.highlight}
-                    </div>
-                  </motion.div>
-                );
-              })}
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-sans font-black text-neutral-950 tracking-tight">
+                Achievements & Participation<span className="text-[#E3280C]">.</span>
+              </h3>
             </div>
           </div>
 
-          {/* Right: Technical & Creative Interests */}
-          <div className="lg:col-span-4 p-7 sm:p-9 rounded-[28px] bg-neutral-950 text-white shadow-xl space-y-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {portfolioData.achievements.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: idx * 0.08 }}
+                whileHover={{ y: -5 }}
+                className="p-6 rounded-2xl bg-white border-2 border-neutral-200 hover:border-[#E3280C] shadow-sm hover:shadow-lg transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-10 h-10 rounded-xl bg-red-50 text-[#E3280C] border border-red-200 flex items-center justify-center mb-4">
+                    <Trophy size={18} />
+                  </div>
+                  <span className="px-2.5 py-0.5 rounded-full bg-red-100 text-[#E3280C] font-mono font-bold text-[11px] uppercase tracking-wider inline-block mb-2">
+                    {item.badge}
+                  </span>
+                  <h4 className="font-sans font-black text-base sm:text-lg text-neutral-950 leading-snug mb-2">
+                    {item.title}
+                  </h4>
+                  <div className="text-xs font-mono font-semibold text-neutral-500 mb-3">
+                    {item.organization}
+                  </div>
+                  <p className="text-xs text-neutral-600 leading-relaxed font-sans">
+                    {item.desc}
+                  </p>
+                </div>
+                <div className="w-8 h-1 bg-[#E3280C] rounded-full mt-5" />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* 5. TECHNICAL & CODING PASSIONS */}
+        <div className="max-w-3xl mx-auto p-7 sm:p-9 rounded-[28px] bg-neutral-950 text-white shadow-xl space-y-5">
 
             <div className="flex items-center gap-2">
               <Sparkles size={20} className="text-[#E3280C]" />
@@ -505,20 +534,31 @@ export default function Skills() {
                 </div>
               </div>
 
-              {/* Action Button */}
-              <button
-                onClick={() => setSelectedCert(null)}
-                className="w-full py-3 rounded-full bg-[#E3280C] hover:bg-[#c82209] text-white font-bold text-sm tracking-wide shadow-md shadow-red-500/20 transition-all cursor-pointer"
-              >
-                Close Verification Window
-              </button>
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                <a
+                  href={selectedCert.verifyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 py-3 px-5 rounded-full bg-[#E3280C] hover:bg-[#c82209] text-white font-bold text-sm tracking-wide shadow-md shadow-red-500/20 transition-all flex items-center justify-center gap-2 group"
+                >
+                  <span>Verify Credential Online</span>
+                  <ExternalLink size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
+                <button
+                  onClick={() => setSelectedCert(null)}
+                  className="py-3 px-6 rounded-full bg-neutral-100 hover:bg-neutral-200 text-neutral-800 font-bold text-sm transition-all cursor-pointer"
+                >
+                  Close
+                </button>
+              </div>
             </motion.div>
           </div>
         )}
       </AnimatePresence>
 
       {/* ========================================================================= */}
-      {/* 3. SIMPLE, MODERN & UNIQUE SEPARATOR (SKILLS -> PROJECTS)                */}
+      {/* 6. SIMPLE, MODERN & UNIQUE SEPARATOR (SKILLS -> PROJECTS)                */}
       {/* ========================================================================= */}
       <div className="relative w-full pt-16 pb-6 overflow-hidden select-none">
         

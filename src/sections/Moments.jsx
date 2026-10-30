@@ -12,29 +12,38 @@ const MOMENTS_ITEMS = [
   {
     id: 'speech-1',
     image: speech1,
-    title: '1st Prize Winner – Paper Presentation',
-    location: 'Shree Venkateshwara Hi-Tech Engineering College',
-    tag: '1st Prize Winner',
+    title: 'Winner – Intra-College Hackathon',
+    location: 'M.P.N.M.J. Engineering College',
+    tag: '1st Place Winner',
     icon: Trophy,
-    description: 'Secured 1st Prize Winner with cash rewards in the Paper Presentation Event during TECHNOVANZ State Level Technical Symposium at Shree Venkateshwara Hi-Tech Engineering College.'
+    description: 'Secured First Place Winner in the Intra-College Hackathon at M.P.N.M.J. Engineering College, architecting innovative software solutions for real-world impact.'
+  },
+  {
+    id: 'speech-2',
+    image: speech2,
+    title: 'Finalist — Protothon Hackathon',
+    location: 'Prince Dr. K. Vasudevan College of Engg., Chennai',
+    tag: 'Hackathon Finalist',
+    icon: Trophy,
+    description: 'Selected as a Finalist in Prince Proto-Thon 26, Chennai, an intensive hackathon prototyping production-grade applications under strict timed evaluation.'
+  },
+  {
+    id: 'award-1',
+    image: award1,
+    title: 'Runner-Up — TECHNOVANZA-2K26 Hackathon',
+    location: 'Shree Venkateshwara Hi-Tech Engineering College',
+    tag: 'Hackathon Runner-Up',
+    icon: Trophy,
+    description: 'Achieved Second Place Runner-Up with cash rewards in the competitive State Level Hackathon during TECHNOVANZA-2K26.'
   },
   {
     id: 'award-2',
     image: award2,
     title: 'Runner-Up – Project Presentation',
     location: 'Shree Venkateshwara Hi-Tech Engineering College',
-    tag: 'Project Presentation Runner',
+    tag: 'Project Runner-Up',
     icon: Award,
     description: 'Awarded Runner-Up with cash rewards in the Project Presentation Event during TECHNOVANZ at Shree Venkateshwara Hi-Tech Engineering College.'
-  },
-  {
-    id: 'award-1',
-    image: award1,
-    title: 'Runner-Up Prize – Hackathon',
-    location: 'Shree Venkateshwara Hi-Tech Engineering College',
-    tag: 'Hackathon Runner-Up',
-    icon: Trophy,
-    description: 'Achieved Runner-Up prize in the competitive State Level Hackathon at Shree Venkateshwara Hi-Tech Engineering College.'
   },
   {
     id: 'event-1',
@@ -44,15 +53,6 @@ const MOMENTS_ITEMS = [
     tag: 'Paper Presentation',
     icon: Award,
     description: 'Presented technical research paper and engaged in project demonstrations at P.A. College of Engineering and Technology.'
-  },
-  {
-    id: 'speech-2',
-    image: speech2,
-    title: 'Prince Proto-Thon 26 Hackathon',
-    location: 'Prince Dr. K. Vasudevan College of Engineering and Technology',
-    tag: 'Hackathon Event',
-    icon: Trophy,
-    description: 'Participated in Prince Proto-Thon 26, an intensive technical hackathon building innovative prototype software at Prince Dr. K. Vasudevan College of Engineering and Technology.'
   }
 ];
 
